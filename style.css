@@ -2,6 +2,7 @@
 html, body {
     margin:0px;
     padding: 0px;
+    font-family: 'Raleway', sans-serif;
 }
 
 #navbar{
@@ -61,6 +62,35 @@ a{
 
 #projects{
     background-color: grey;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "header header header"
+    "1 2 3"
+    "4 5 6";
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows: repeat(3,400px);
+}
+
+#projects>h1{
+    color: white;
+    font-size: 3rem;
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+    grid-area: header;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+#project-title{
+    width: 400px;
+    height: 400px;
 }
 
 @media screen and (max-width = 749px) {
